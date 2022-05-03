@@ -36,7 +36,11 @@
 
     
 }
-
+.left2{
+    padding-right: 0vh;
+    padding-bottom: 2vh;
+    width: 120vh;
+}
 .right1{
 
     padding-bottom: 2vh;
@@ -76,6 +80,19 @@
   .nav {
     float: right;
     padding: 20px;
+  }
+ ol {
+  list-style-type: circle;
+  }
+  ol li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding-right: 150px;
+  }
+	ol li a:hover {
+    color: rgb(255, 217, 0);
   }
   ul li {
     display: inline-block;
