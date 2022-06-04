@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../static/css/fir_display.css">
+    <title>Contact info</title>
+</head>
+<style>
+    .submit{
+  background-color: rgb(38, 38, 39);
+  color: #ffffff;
+  padding: 2.5vh 5vh 2.5vh 5vh;
+  margin: 4vh;
+  font-size: 2.5vh;
+  border-radius: 2vh;
+  border: solid 0.4vh white;
+  margin-left: 22%;
+  
+}
+
+.submit:hover {
+  color: rgb(255, 217, 0);
+  border: solid 0.4vh rgb(255, 217, 0);
+
+}
+</style>
+<body>
+
+<div class="main1">
+    
+
+    <p style="color: rgb(0, 0, 0); text-align: center; font-size: 5vh; font-weight: bold;  background-color: white;">FIR Details</p>
+    <br>
+    
+    <p class="title">Important Information</p>
+    <br>
+    <table>
+        <tr>
+            <td class="left1">
+                FIR Number :
+            </td>
+            <td class="right1">
+                {{main_table.fir_no}}
+            </td>
+
+        </tr>
+        <tr>
+            <td class="left1">
+                Crime Type :
+            </td>
+            <td class="right1">
+                {{crime_type}}   
+            </td>
+
+        </tr>
+    </table>
+    <br>
+    <br>
+    <p class="title">Crime Information</p>
+
+    <br>
+    <table class="tb">
+        
+        <tr>
+            <td class="left1">
+                Date of Application :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.doa}}
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Place of Offense :
+            </td>
+            <td class="right1">
+                {{Crime_Info.poo}}
+            </td>
+        </tr>
+
+       
+
+        <tr>
+            <td class="left1">
+                City/Town/Village :
+            </td>
+            <td class="right1">
+                {{Crime_Info.city}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                District :
+            </td>
+            <td class="right1">
+                {{Crime_Info.district}}
+            </td>
+        </tr>
+        <tr>
+            <td class="left1">
+                State :
+            </td>
+            <td class="right1">
+                {{Crime_Info.state}}
+            </td>
+        </tr>
+        <tr>
+            <td class="left1">
+                Pincode :
+            </td>
+            <td class="right1">
+                {{Crime_Info.pincode}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Occurence of Offense from :
+            </td>
+            <td class="right1">
+                {{Crime_Info.ooo_from}}
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td class="left1">
+                Occurence of Offense to :
+            </td>
+            <td class="right1">
+                {{Crime_Info.ooo_to}}
+            </td>
+        </tr>
+
+       
+    </table>
+
+
+<br>
+
+        
+
+       
+    </table>
+
+
+    <p class="title">Complainant Information</p>
+    <br>
+
+
+    <table class="tb"> 
+        
+        <tr>
+            <td class="left1">
+                Name: 
+            </td>
+            <td class="right1">
+                {{Complainant_Info.name}}
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Husband/Father name :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.father_name}}
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Relation with victim :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.relation_with_vicitm}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Date of Birth :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.dob}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Address :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.address}}
+            </td>
+        </tr>
+
+        
+
+        <tr>
+            <td class="left1">
+                City/Town/Village :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.city}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                District :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.district}}
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="left1">
+                State :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.state}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Pincode :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.pincode}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Nationality :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.nationality}}
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td class="left1">
+                Occupation :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.occupation}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Aaddhar Number :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.addhar_no}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Email :
+            </td>
+            <td class="right1">
+                {{Complainant_Info.email}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Phone number:
+            </td>
+            <td class="right1">
+                {{Complainant_Info.phone_no}}
+            </td>
+        </tr>
+
+         
+    </table>
+
+    <p class="title">Suspect Info:</p>
+    <br>
+
+    <table class="tb">
+        <tr>
+            <td class="left1">
+                Details of known/suspected/unknown accussed in full particulars:
+            </td>
+            <td class="right1">
+                {{Suspect_Info.other_info}}
+            </td>
+        </tr>  
+
+    </table>
+
+    <p class="title">FIR Details:</p>
+    <br>
+
+    <table class="tb">
+        <tr>
+            <td class="left1">
+                FIR details/ Details of the situation: 
+            </td>
+            <td class="right1">
+                {{Fir_Details.detail_info}}
+            </td>
+        </tr> 
+    </table>
+    <table class="tb">
+        <tr>
+            <td class="left1">
+                The documents are verified by Police Incharge: 
+            </td>
+            <td class="right1">
+                {{Full_Name.first_name}} {{Full_Name.last_name}}
+            </td>
+        </tr> 
+    </table>
+    <a class="submit" href="{% url 'home' username %}" role="button">Home</a>
+    <button class="submit" onclick="myfun()">Print page</button>
+    <script type="text/javascript">
+        function myfun(){
+            window.print();
+        }
+    </script>
+</div> 
+</body>
+</html>

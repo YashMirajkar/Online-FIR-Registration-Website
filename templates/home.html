@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/../static/css/viewfircss1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img id="logo" src="/../static/img/logo.png" alt="logo"/>
+    <div class="photograph">Online<span>FIR</span>System</div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="{% url 'home' username %}">Home</a>
+        </li>
+        <li>
+          <a href="#">Update Status</a>
+        </li>
+        <li>
+          <a href="{% url 'viewfir' username %}">View Complaints</a>
+        </li>
+        <li>
+          <a href="{% url 'profile' username %}">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content">
+    <marquee class="scrolling" behavior="scrolling" direction="left" scrollamount="20">
+      <h3>Let us help the people in need......</h3>
+    </marquee>
+  </div>
+
+  <div class="middle">
+  <div class="left">
+    Welcome to Online FIR Registration System
+    <br />
+    Simplified for Complainants,
+    <br />
+    For the people in need to make them feel safe.
+
+    </div>
+    <div class="right">
+        <img src="/../static/img/satyamev_jayate.jpg" alt="" />
+    </div>
+  </div>
+
+
+</div>
+<footer >
+  <div id="foot">
+    <div class="button">
+      <a href="/../quick" class="color">
+       <b> Quick Links</b> 
+      </a>
+      <a href="/../emergency" class="color">
+       <b> Emergency Numbers </b> 
+      </a>
+      <a href="/../ngo" class="color">
+       <b>Contact NGO</b>  
+      </a>
+    </div>
+    <br />
+    <br />
+    <p>
+      Disclaimer: The facility of registering complaint on Online FIR system is purely for the convenience of the citizens. All efforts will be made to take quick and
+      precise action on the complaints lodged.
+      <br />
+      Warning: Giving wrong and misleading information is serious crime. Action can be taken.
+    </p>
+    <br />
+    <p>Contact Us :</p>
+    <p>Mail : onlinefirregistrationsystem@gmai.com | Instagram: @onlinefirsystem | Phone : 9983648826</p>
+  </div>
+</footer>
+  
+</body>
+</html>

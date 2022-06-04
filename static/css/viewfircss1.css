@@ -1,0 +1,207 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background{
+  background-image: url("background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.photograph {
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  float: left;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 4px solid white;
+      border-radius: 50px; */
+}
+span {
+  color: rgb(255, 217, 0);
+}
+nav {
+  background-color: rgb(38, 38, 39);
+  width: 100%;
+  height: 80px;
+}
+.nav {
+  float: right;
+  padding: 20px;
+}
+ul li {
+  display: inline-block;
+  padding-top: 10px;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 150px;
+}
+ul li a:hover {
+  color: rgb(255, 217, 0);
+}
+
+.content {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px;
+  margin: 5px;
+}
+a {
+  text-decoration: none;
+}
+
+.scrolling{
+    background-color: gold;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    padding: 20px 0px 20px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.middle{
+    height: 180px;
+    padding: 10px 200px 10px 200px;
+    border: 2px solid rgb(38, 38, 39);
+    margin: 10px 100px 10px 100px;
+    border-radius: 10px;
+    overflow: scroll;
+}
+.left{
+    float: left;
+    margin: 45px ;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.right{
+    float: right;
+}
+/* hr{
+    border:3px solid rgb(38, 38, 39) ;
+} */
+.button {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.color {
+  margin: 50px 100px 0px 100px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: rgb(38, 38, 39);
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  border: solid 3px rgb(255, 255, 255);
+}
+.color:hover {
+  color: rgb(255, 217, 0);
+  border: solid 3px rgb(255, 217, 0);
+}
+
+.card {
+  width: 20%;
+  background-color: rgb(38, 38, 39);
+  text-align: center;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  color: #ffffff;
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border-radius: 50px; */
+  display: inline-block;
+}
+.click {
+  text-decoration: none;
+  color: aliceblue;
+}
+.click:hover {
+  color: gold;
+}
+.icon {
+  font-size: 200px;
+}
+.card:hover {
+  color: rgb(255, 217, 0);
+}
+
+.container {
+  padding: 2px 16px;
+  font-size: 30px;
+}
+footer p {
+  padding: 10px 200px 0px 200px;
+}
+#foot {
+  height: 300px;
+  background-color: rgb(38, 38, 39);
+  text-align: center;
+  padding: 30px 20px 10px 20px;
+  color: white;
+}
+
+#logo {
+  float: left;
+  height: 60px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 100px;
+}
+
+.heading{
+  padding: 10px 0px 10px 400px;
+  margin: 20px 10px 20px 10px;
+}
+
+
+
+
+
+.btn{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  padding: 8px 12px;
+  background: grey;
+  margin: 25px 20px 0 0;
+  color: white;
+  border-radius: 6px;
+}
+.btn:hover{
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+.all-fircard {
+margin: 50px;
+padding: 5px;
+background-color: grey;
+}
+
+.all-fircard > h1, .fircard {
+margin: 10px;
+padding: 5px;
+}
+
+.fircard {
+background: white;
+}
+
+.fircard > h2, p {
+margin: 4px;
+font-size: 90%;
+}

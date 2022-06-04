@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ViewFir</title>
+    <link rel="stylesheet" href="/../static/css/viewfircss.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+  <body>
+  <nav>
+        <img id="logo" src="/../static/img/logo.png" alt="logo"/>
+    <div class="photograph">Online<span>FIR</span>System</div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="/account/home">Home</a>
+        </li>
+        <li>
+          <a href="#">Update Status</a>
+        </li>
+        <li>
+          <a href="#">View Complaints</a>
+        </li>
+        <li>
+          <a href="#">Upload FIR</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+      <article class="fircard">
+        Complainant information
+  {% for val in dict %}
+  		<article class="fircard">
+        <form id="msform" action="loadfir" method="post"> 
+          {% csrf_token %}
+        <p>
+          <input name="Complainant_no." type="text" required class="form-control" id="name" placeholder="Complainant Number" 
+          value={{val.request_no.request_no}}>
+          <input name="Complainant_date" type="text" required class="form-control" id="name" placeholder="Complainant Date" 
+          value={{val.doa}}>
+          <input name="Crime_type" type="text" required class="form-control" id="name" placeholder="Crime Type" 
+          value={{val.request_no.crime_type}}>
+          <input name="Complainant_Name" type="text" required class="form-control" id="name" placeholder="Complainant's Name" 
+          value={{val.name}}>
+          <input type="submit" value="View Fir" class="btn">			  
+          <input type="button" value="Contact" class="btn">
+        </p>
+      </form>
+      </article>
+  {% endfor %}
+	  </article>
+	  
+	  
+	
+	
+<footer >
+        <div id="foot">
+          <div class="button">
+            <a href="#" class="color">
+             <b> Quick Links</b> 
+            </a>
+            <a href="#" class="color">
+             <b> Emergency Numbers </b> 
+            </a>
+            <a href="#" class="color">
+             <b>Contact NGO</b>  
+            </a>
+          </div>
+          <br />
+          <br />
+          <p>
+            Disclaimer: The facility of registering complaint on Online FIR system is purely for the convenience of the citizens. All efforts will be made to take quick and
+            precise action on the complaints lodged.
+            <br />
+            Warning: Giving wrong and misleading information is serious crime. Action can be taken.
+          </p>
+          <br />
+          <p>Contact Us :</p>
+          <p>Mail : onlinefirregistrationsystem@gmai.com | Instagram: @onlinefirsystem | Phone : 9983648826</p>
+        </div>
+      </footer>
+  </body>
+</html>

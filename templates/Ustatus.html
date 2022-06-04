@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/../static/css/style1.css">
+    <title>Update Status</title>
+    <style>
+      form{
+          text-align: center;
+          font-size: 3vh;
+          padding: 5vh;
+          margin: 5vh;
+          background-color: grey;
+          width: 50%;
+          margin-left: 20%;
+          border-radius: 10vh;
+      }
+      #s1{
+          font-size: 2.5vh;
+          width: 40%;
+      }
+      #s2{
+          font-size: 2.5vh;
+          width: 40%;
+      }
+      #name{
+        font-size: 2.5vh;
+          width: 40%;
+
+      }
+  </style>
+</head>
+<body>
+
+
+    <nav>
+        <img id="logo" src="/../static/img/logo.png" alt="logo"/>
+    <div class="photograph">Online<span>FIR</span>System</div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="{% url 'home' username %}">Home</a>
+        </li>
+        <li>
+          <a href="#">Update Status</a>
+        </li>
+        <li>
+          <a href="{% url 'viewfir' username %}">View Complaints</a>
+        </li>
+        <li>
+          <a href="{% url 'profile' username %}">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+    
+    <form id="Status" action="{% url 'updatestatus' pk username %}" method="post"> 
+    {% csrf_token %}
+    <label>Enter the Status</label>
+    <br>
+    <div class="form-group">
+        <div class="input-group">
+                  <select class="custom-select" style="width:40%;" name="status" id="s1">
+                      <option value=" ">Select Status:</option>
+                      <option value="Accepted">Accepted</option>
+                      <option value="Rejected">Rejected</option>
+                      <option value="Pending">Pending</option>
+           </select>
+        </div>
+    </div>
+    <br>
+
+    <div class="form-group">
+        <div class="input-group">
+          <input name="fir_number" type="text" required class="form-control" id="name" placeholder="Enter the FIR no." title="name">
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-7" for="Comments"><span class="required"></span>Add Comment if rejected</label>
+        <br>
+          <div class="input-group">
+            <textarea  id="s2" class="form-control" name="comment" rows="8" placeholder="Add atmost 150 words"></textarea>
+          </div>
+    </div>
+    <a class="submit" href="{% url 'printfir' pk username %}" role="button">Print FIR</a>
+    <button type="submit" class="submit">Submit</button>  
+    </form> 
+   
+
+    <footer >
+        <div id="foot">
+          <div class="button">
+            <a href="/../quick" class="color">
+             <b> Quick Links</b> 
+            </a>
+            <a href="/../emergency" class="color">
+             <b> Emergency Numbers </b> 
+            </a>
+            <a href="/../ngo" class="color">
+             <b>Contact NGO</b>  
+            </a>
+          </div>
+          <br />
+          <br />
+          <p>
+            Disclaimer: The facility of registering complaint on Online FIR system is purely for the convenience of the citizens. All efforts will be made to take quick and
+            precise action on the complaints lodged.
+            <br />
+            Warning: Giving wrong and misleading information is serious crime. Action can be taken.
+          </p>
+          <br />
+          <p>Contact Us :</p>
+          <p>Mail : onlinefirregistrationsystem@gmai.com | Instagram: @onlinefirsystem | Phone : 9983648826</p>
+        </div>
+      </footer>
+
+      <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+      function loadGoogleTranslate(){
+        new google.translate.TranslateElement("foot")
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>ViewFir</title>
+    <link rel="stylesheet" href="/../static/css/viewfircss1.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+  
+  <body>
+  <nav>
+        <img id="logo" src="/../static/img/logo.png" alt="logo"/>
+    <div class="photograph">Online<span>FIR</span>System</div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="{% url 'home' username %}">Home</a>
+        </li>
+        <li>
+          <a href="#">Update Status</a>
+        </li>
+        <li>
+          <a href="{% url 'viewfir' username %}">View Complaints</a>
+        </li>
+        <li>
+          <a href="{% url 'profile' username %}">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+    
+	 
+	  <article class="all-fircard">
+	  <h1 class="title"> Complaints<h1>
+		{% for val in obj %}
+    {% if val.crime_pincode == pincode %}
+    {% if val.request_no.crime_type == '0' %}
+	  <article class="fircard">
+			<p>
+				<p>FIR Number : {{val.request_no.request_no}}
+				<p>Complaint Date : {{val.doa}}
+				<p>Crime Type : Kidnapping
+				<p>Complaintant's Name : {{val.name}}</p>
+				<a id="fcc-btn1" href="{% url 'loadfir' val.request_no.request_no username %}" style="padding: 1vh 3vh  1vh 3vh; color: white; background-color: rgb(38,38,39); font-weight: normal; font-size: 2vh; border-radius: 1vh; margin-right: 2vh; ">View FIR</a>
+        <a class="fcc-btn" href="{% url 'contact' val.request_no.request_no username %} " style="padding: 1vh 3vh  1vh 3vh; color: white; background-color: rgb(38,38,39); font-weight: normal; font-size: 2vh; border-radius: 1vh;">Contact</a>
+			</p>
+		</article>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% for val in obj %}
+    {% if val.crime_pincode == pincode %}
+    {% if val.request_no.crime_type == '1' %}
+	  <article class="fircard">
+			<p>
+				<p>FIR Number : {{val.request_no.request_no}}
+				<p>Complaint Date : {{val.doa}}
+				<p>Crime Type : child abuse
+				<p>Complaintant's Name : {{val.name}}</p>
+				<a id="fcc-btn1" href="{% url 'loadfir' val.request_no.request_no username %}" style="padding: 1vh 3vh  1vh 3vh; color: white; background-color: rgb(38,38,39); font-weight: normal; font-size: 2vh; border-radius: 1vh; margin-right: 2vh; ">View FIR</a>
+        <a class="fcc-btn" href="{% url 'contact' val.request_no.request_no username %} " style="padding: 1vh 3vh  1vh 3vh; color: white; background-color: rgb(38,38,39); font-weight: normal; font-size: 2vh; border-radius: 1vh;">Contact</a>
+			</p>
+		</article>
+    {% endif %}
+    {% endif %}
+		{% endfor %}
+	  </article>
+	  
+	  
+	
+	
+    <footer >
+      <div id="foot">
+        <div class="button">
+          <a href="/../quick" class="color">
+           <b> Quick Links</b> 
+          </a>
+          <a href="/../emergency" class="color">
+           <b> Emergency Numbers </b> 
+          </a>
+          <a href="/../ngo" class="color">
+           <b>Contact NGO</b>  
+          </a>
+        </div>
+        <br />
+        <br />
+        <p>
+          Disclaimer: The facility of registering complaint on Online FIR system is purely for the convenience of the citizens. All efforts will be made to take quick and
+          precise action on the complaints lodged.
+          <br />
+          Warning: Giving wrong and misleading information is serious crime. Action can be taken.
+        </p>
+        <br />
+        <p>Contact Us :</p>
+        <p>Mail : onlinefirregistrationsystem@gmai.com | Instagram: @onlinefirsystem | Phone : 9983648826</p>
+      </div>
+    </footer>
+  </body>
+</html>

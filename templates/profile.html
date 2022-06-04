@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/../static/css/profile1.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <img id="logo" src="/../static/img/logo.png" alt="logo"/>
+    <div class="photograph">Online<span>FIR</span>System</div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="{% url 'home' username %}">Home</a>
+        </li>
+        <li>
+          <a href="#">Update Status</a>
+        </li>
+        <li>
+          <a href="{% url 'viewfir' username %}">View Complaints</a>
+        </li>
+        <li>
+          <a href="{% url 'profile' username %}">Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main1">
+
+    <p class="title">Welcome to Police Dashboard</p>
+
+    <br>
+
+
+    <table class="tb">
+        
+        
+        <tr>
+            <td class="left1">
+                Username :
+            </td>
+            <td class="right1">
+                {{username}}
+            </td>
+
+        </tr>
+
+        <tr>
+            <td class="left1">
+                First Name :
+            </td>
+            <td class="right1">
+                {{obj.first_name}}
+        </tr>
+        <tr>
+          <td class="left1">
+              Last Name :
+          </td>
+          <td class="right1">
+              {{obj.last_name}}
+      </tr>
+        <tr>
+            <td class="left1">
+                Married Status :
+            </td>
+            <td class="right1">
+                Unmarried
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Sex :
+            </td>
+            <td class="right1">
+                Male
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Age :
+            </td>
+            <td class="right1">
+                20
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Address :
+            </td>
+            <td class="right1">
+                A-27 Pranam ChS, Chickoowadi, SHimpoli, Borivali West, Mumbai - 400092, Above State Bank of India.
+                A-27 Pranam ChS, Chickoowadi, SHimpoli, Borivali West, Mumbai - 400092, Above State Bank of India.
+            </td>
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td class="left1">
+                Phone Number :
+            </td>
+            <td class="right1">
+                682693628
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Email :
+            </td>
+            <td class="right1">
+              {{obj.email}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Date Joined :
+            </td>
+            <td class="right1">
+              {{obj.date_joined}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Last Login :
+            </td>
+            <td class="right1">
+              {{obj.last_login}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Police Station assigned :
+            </td>
+            <td class="right1">
+              {{obj1.Police_Station}}
+            </td>
+        </tr>
+
+        <tr>
+            <td class="left1">
+                Police Station Pincode :
+            </td>
+            <td class="right1">
+              {{obj1.pincode}}
+            </td>
+        </tr>
+
+       
+    </table>
+
+
+</div>
+<footer >
+  <div id="foot">
+    <div class="button">
+      <a href="/../quick" class="color">
+       <b> Quick Links</b> 
+      </a>
+      <a href="/../emergency" class="color">
+       <b> Emergency Numbers </b> 
+      </a>
+      <a href="/../ngo" class="color">
+       <b>Contact NGO</b>  
+      </a>
+    </div>
+    <br />
+    <br />
+    <p>
+      Disclaimer: The facility of registering complaint on Online FIR system is purely for the convenience of the citizens. All efforts will be made to take quick and
+      precise action on the complaints lodged.
+      <br />
+      Warning: Giving wrong and misleading information is serious crime. Action can be taken.
+    </p>
+    <br />
+    <p>Contact Us :</p>
+    <p>Mail : onlinefirregistrationsystem@gmai.com | Instagram: @onlinefirsystem | Phone : 9983648826</p>
+  </div>
+</footer>
+  
+</body>
+</html>

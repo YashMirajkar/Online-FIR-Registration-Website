@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <!-- Bootstrap 4 CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+    <!-- Telephone Input CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css'>
+    <!-- Icons CSS -->
+  <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <!-- Nice Select CSS -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css'>
+   <!-- Style CSS -->
+  <link rel="stylesheet" href="form_style.css">
+  <!-- Demo CSS -->
+  <link rel="stylesheet" href="demo.css">
+    <title>FIR Details</title>
+
+    <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(38, 38, 39);
+        
+      }
+      .all{
+        max-width: 80%;
+        margin: 5% 5% 5% 10%;
+        background-color: white;
+        padding: 5%;
+        border-radius: 2%;
+      }     
+    </style>
+    </head>
+</head>
+<body>
+    
+<div class="all">
+  <div>
+    Crime Information
+  </div>
+  <div>
+    Date of Application : {{Complainant_Info.doa}}
+  </div>
+  <div>
+    Place of offence : {{Crime_Info.poo}}
+  </div>
+  <div>
+    City/Town/Village : {{Crime_Info.city}}
+  </div>
+  <div>
+    District : {{Crime_Info.district}}
+  </div>
+  <div>
+    State : {{Crime_Info.state}}
+  </div>
+  <div>
+    Pincode : {{Crime_Info.pincode}}
+  </div>
+  <div>
+    Occurence of offence from : {{Crime_Info.ooo_from}}
+  </div>
+  <div>
+    Occurence of offence to : {{Crime_Info.ooo_to}}
+  </div>
+  <div>
+    Complainant Information:
+  </div>
+  <div>
+    Name: {{Complainant_Info.name}}
+  </div>
+  <div>
+    Husband/Father name : {{Complainant_Info.father_name}}
+  </div>
+  <div>
+    Relation with victim : {{Complainant_Info.relation_with_vicitm}}
+  </div>
+  <div>
+    Date of Birth : {{Complainant_Info.dob}}
+  </div>
+  <div>
+    Address : {{Complainant_Info.address}}
+  </div>
+  <div>
+    City/Town/Village : {{Complainant_Info.city}}
+  </div>
+  <div>
+    District : {{Complainant_Info.district}}
+  </div>
+  <div>
+    State : {{Complainant_Info.state}}
+  </div>
+  <div>
+    Pincode : {{Complainant_Info.pincode}}
+  </div>
+  <div>
+    Nationality : {{Complainant_Info.nationality}}
+  </div>
+  <div>
+    Occupation : {{Complainant_Info.occupation}}
+  </div>
+  <div>
+    Aaddhar Number : {{Complainant_Info.addhar_no}}
+  </div>
+  <div>
+    Email : {{Complainant_Info.email}}
+  </div>
+  <div>
+    Phone number: {{Complainant_Info.phone_no}}
+  </div>
+  <div>
+    Suspect Info:
+  </div>
+  <div> 
+    Details of known/suspected/unknown accussed in full particulars: {{Suspect_Info.other_info}}
+  </div>
+  <div>
+    FIR Details:
+  </div>
+  <div>
+    FIR details/ Details of the situation: {{Fir_Details.detail_info}}
+  </div>
+  <div>
+    Attachments:
+  </div>
+  <div>
+    Sign : <img src="{{Attachments_Doc.sign.url}}" alt="image here">
+  </div>
+  <div>
+    Aaddhar Copy : <img src="{{Attachments_Doc.aaddhar_copy.url}}" alt="image here">
+  </div>
+
+
+    <fieldset>
+      <h3>Crime Information</h3>
+          <div class="form-group">
+              <div class="form-group">
+          <label class="control-label col-sm-10" for="name"><span class="required">*</span>Date of Application:</label>
+            <div class="input-group">
+              <input name="date" type="Text" required class="form-control" id="date" placeholder="Enter Todays Date" title="date">
+              
+          </div>
+        </div>
+        
+          <!--Place of Offense-->
+          <label class="control-label col-sm-10" ><span class="required">*</span>Place of Offense:</label>
+          <div class="form-group">
+          
+            <div class="input-group">
+  
+              <textarea class="form-control" name="address" rows="4" placeholder="Enter Address here." value="Hello sirji"></textarea>
+            </div>
+        </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input name="city" type="text" required class="form-control" id="city" placeholder="Enter City/Town/Village" title="city">
+            </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-group">
+            <input name="city" type="text" required class="form-control" id="city" placeholder="Enter City/Town/Village" title="city">
+          </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="input-group">
+          <input name="city" type="text" required class="form-control" id="city" placeholder="Enter City/Town/Village" title="city">
+        </div>
+    </div>
+ 
+        
+        <div class="form-group">
+            <div class="input-group">
+              <input name="Pincode" type="number" required class="form-control" id="pid" placeholder="Enter Pincode" title="Pincode" maxlength="6">
+              
+          </div>
+        </div>
+        
+        <!--Occurence of Offense-->
+        <label class="control-label col-sm-10" ><span class="required">*</span>Occurence of Offense:</label>
+          <div class="form-group">
+          <label class="control-label col-sm-10" ><span class="required">*</span>Date and Time</label>
+            <div class="input-group">
+              <label for="inputMDEx1">From: </label>
+                  <input name="date" type="Date" required class="form-control" id="From" title="From">
+                <input type="time" id="inputMDEx1" class="form-control">
+          </div>
+            <div class="input-group">
+              <label for="inputMDEx1">To: </label>
+                  <input name="name" type="Date" required class="form-control" id="To" title="To">
+                <input type="time" id="inputMDEx1" class="form-control">
+            </div>
+        </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <h3>Complainant Information</h3>
+                   <div class="form-group">
+            <div class="input-group">
+              <input name="name" type="text" required class="form-control" id="name" placeholder="Enter your name" title="name">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+              <input name="fathername" type="text" required class="form-control" id="fathername" placeholder="Enter your Husband/Father name" title="fathername">
+            </div>
+        </div>
+          <div class="form-group">
+          <label class="control-label col-sm-10" ><span class="required"></span>Date of Birth</label>
+            <div class="input-group">
+              <input name="dob" type="Date" required class="form-control" id="dob" placeholder="Enter your Date of Birth" title="dob">
+            </div>
+        </div>
+        <div class="form-group">
+          
+            <div class="input-group">
+  
+              <textarea class="form-control" name="address" rows="4" placeholder="Enter Address here."></textarea>
+          </div>
+        </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input name="city" type="text" required class="form-control" id="city" placeholder="Enter City/Town/Village" title="city">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+              <select class="custom-select" style="width:150px;" name="district" id="district">
+                          <option value=" ">Select District</option>
+                          <option value="Palghar">Palghar</option>
+                          <option value="Thane.">Thane</option>
+                          <option value="Nashik.">Nashik.</option>
+                          <option value="Nagpur">Nagpur</option>
+                          <option value="Pune">Pune</option>
+               </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+              <select class="custom-select" style="width:150px;" name="state" id="state">
+                          <option value=" ">Select State</option>
+                          <option value="Maharashtra">Maharashtra</option>
+                          <option value="Gujrat.">Gujrat.</option>
+                          <option value="Karnataka.">Karnataka.</option>
+                          <option value="Tamilnadu">Tamilnadu</option>
+                          <option value="Kerala">Kerala</option>
+               </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="input-group">
+              <input name="Pincode" type="number" required class="form-control" id="pid" placeholder="Enter Pincode" title="Pincode" maxlength="6">
+              
+            </div>
+          
+        </div>
+  
+                <div class="form-group">
+            <div class="input-group">
+              <input name="Nationality" type="text" required class="form-control" id="Nationality" placeholder="Enter Your Nationality" title="Nationality">
+            </div>
+          </div>
+        
+                <div class="form-group">
+            <div class="input-group">
+              <input name="Occupation" type="text" required class="form-control" id="Occupation" placeholder="Occupation" title="Occupation">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+              <input name="AdhaarNumber" type="number" required class="form-control" id="pid" placeholder="Adhaar Number" title="AdhaarNumber" maxlength="12">
+              
+            </div>
+        </div>
+        <!--Email Address-->
+        <div class="form-group">
+              <input name="Email" type="email" required class="form-control" id="email" placeholder="your@email.com" title="Email">
+            </div>
+  
+  
+            <!--Phone-->
+        <div class="form-group">
+          <div class="input-group">
+            <input name="Phone" type="phone" class="form-control" id="phone" placeholder="Phone no." title="Phone no.">
+          
+        </div>
+      </div> 
+  
+      <h3>Suspect Information</h3>
+  <div class="form-group">
+    <label class="control-label col-sm-7" for="Suspect Details"><span class="required">*</span>Details of known/suspected/unknown accussed in full particulars</label>
+      <div class="input-group">
+  
+        <textarea class="form-control" name="Suspect Details" rows="8" placeholder="Type Details of known/suspected/unknown accussed in full particulars"></textarea>
+      </div>
+    
+  </div>
+  
+  
+  
+  
+  <h3>FIR Details</h3>
+  <div class="form-group">
+    <label class="control-label col-sm-7" for="FIR details"><span class="required">*</span>FIR details/ Details of the situation:</label>
+      <div class="input-group">
+  
+        <textarea class="form-control" name="FIR details" rows="8" placeholder="Type FIR details/ Details of the situation"></textarea>
+    </div>
+  </div>
+  </div>
+        </div>
+  
+        
+  
+    
+      </fieldset>  
+
+
+  
+
+
+</div>
+
+  
+
+
+
+</body>
+</html>
